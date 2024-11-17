@@ -448,7 +448,7 @@ img {
 }
 
 .image-col:nth-child(3) .project-image::after {
-    background-image: url(./images/project-images/wtispace.webp);
+    background-image: url(./images/project-images/wtiSpace.webp);
 }
 
 .image-col:nth-child(6) .project-image::after {
