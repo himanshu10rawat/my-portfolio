@@ -49,6 +49,8 @@ emailjs.init("EwGPKszVyh6uh8oER");
 
 const handleSubmit = (event) => {
   event.preventDefault();
+  const submitButtonText = document.querySelector(".submit-button span");
+  submitButtonText.innerText = "Sending...";
   emailjs
     .send("service_xnr9ku9", "template_wh7usuh", formData)
     .then((response) => {
@@ -57,9 +59,11 @@ const handleSubmit = (event) => {
       document
         .querySelectorAll("input, textarea")
         .forEach((input) => (input.value = ""));
+      submitButtonText.innerText = "Send";
     })
     .catch((error) => {
       alert("Failed to send message. Please try again later.");
       console.error("FAILED...", error);
+      submitButtonText.innerText = "Send";
     });
 };
