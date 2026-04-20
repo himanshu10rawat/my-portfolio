@@ -1,5 +1,8 @@
 {
   "projects": {
-    "default": "himanshurawatportfolio"
-  }
+    "default": "himanshurawatportfolio",
+    "Production": "himanshurawatportfolio"
+  },
+  "targets": {},
+  "etags": {}
 }
