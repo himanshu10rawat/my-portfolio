@@ -64,7 +64,7 @@ img {
 }
 
 .hero-section {
-  height: 100vh;
+  height: 100dvh;
   position: relative;
   overflow: hidden;
 }
