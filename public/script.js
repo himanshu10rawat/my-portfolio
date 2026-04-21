@@ -25,7 +25,10 @@ const applyTheme = (themePreference = getStoredTheme()) => {
   document.documentElement.style.colorScheme = resolvedTheme;
 
   if (themeColorMeta) {
-    themeColorMeta.setAttribute("content", resolvedTheme === "dark" ? "#020617" : "#ffffff");
+    themeColorMeta.setAttribute(
+      "content",
+      resolvedTheme === "dark" ? "#020617" : "#ffffff",
+    );
   }
 
   updateThemeToggleLabel(resolvedTheme);
@@ -56,6 +59,7 @@ if (typeof darkThemeMedia.addEventListener === "function") {
   darkThemeMedia.addListener(handleSystemThemeChange);
 }
 
+// Pehele ka Code
 const showAboutMe = document.querySelector("#show-about-me");
 const aboutMePopup = document.querySelector(".background-black-drop");
 if (showAboutMe && aboutMePopup) {
@@ -117,7 +121,9 @@ const handleSubmit = (event) => {
     .send("service_xnr9ku9", "template_wh7usuh", formData)
     .then(() => {
       alert("Message sent successfully!");
-      document.querySelectorAll("input, textarea").forEach((input) => (input.value = ""));
+      document
+        .querySelectorAll("input, textarea")
+        .forEach((input) => (input.value = ""));
       if (submitButtonText) {
         submitButtonText.innerText = "Send";
       }
